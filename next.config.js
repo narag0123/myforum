@@ -1,8 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
+const path = require("path");
 
-module.exports = nextConfig
+const nextConfig = {
+    sassOptions: {
+        includePaths: [path.join(__dirname, "styles")],
+    },
+    experimental: {
+        appDir: true,
+    },
+};
+
+module.exports = nextConfig;
